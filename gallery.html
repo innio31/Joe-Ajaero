@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Photo gallery documenting Comrade Joe Ajaero's leadership journey - from labour advocacy to national engagement.">
+    <title>Gallery | Comrade Joe Ajaero - Leadership in Images</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== ROOT VARIABLES (matching index) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a3c34;
+            --secondary: #2d5c4f;
+            --accent: #c8a951;
+            --accent-light: #e6d8a8;
+            --dark: #1a1a1a;
+            --dark-gray: #333;
+            --medium-gray: #666;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(45, 92, 79, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* announcement bar */
+        .announcement-bar {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 12px 0;
+            font-size: 0.95rem;
+        }
+
+        .announcement-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .announcement-bar i {
+            margin-right: 8px;
+            color: var(--accent-light);
+        }
+
+        .announcement-bar .read-more {
+            color: var(--accent-light);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .announcement-bar .read-more:hover {
+            gap: 12px;
+            color: var(--white);
+        }
+
+        /* header */
+        .main-header {
+            padding: 20px 0;
+            background-color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .main-header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-monogram {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .main-nav a {
+            font-weight: 600;
+            color: var(--dark-gray);
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary);
+        }
+
+        .main-nav a.active {
+            color: var(--primary);
+        }
+
+        .main-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .contact-btn {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* ===== GALLERY PAGE SPECIFIC STYLES ===== */
+
+        /* Gallery Hero */
+        .gallery-hero {
+            background: linear-gradient(135deg, rgba(26, 60, 52, 0.05) 0%, rgba(200, 169, 81, 0.05) 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .gallery-hero h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .gallery-hero .hero-highlight {
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+
+        .gallery-hero .hero-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(200, 169, 81, 0.2);
+            z-index: -1;
+        }
+
+        .gallery-hero p {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Filter Tabs */
+        .gallery-filter {
+            background-color: var(--white);
+            padding: 30px 0 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-tab {
+            padding: 12px 25px;
+            background-color: var(--light-gray);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-tab i {
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .filter-tab:hover {
+            background-color: var(--white);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .filter-tab.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .filter-tab.active i {
+            color: var(--accent);
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 60px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* Gallery Item */
+        .gallery-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: var(--white);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .gallery-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            background-color: var(--light-gray);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .gallery-item:hover .gallery-image img {
+            transform: scale(1.05);
+        }
+
+        .gallery-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 2;
+        }
+
+        .gallery-badge i {
+            color: var(--accent);
+        }
+
+        .gallery-caption {
+            padding: 20px;
+        }
+
+        .gallery-caption h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .gallery-caption p {
+            color: var(--medium-gray);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .gallery-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .gallery-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Featured Gallery Strip */
+        .featured-strip {
+            background-color: var(--light-gray);
+            padding: 40px 0;
+            margin: 40px 0;
+        }
+
+        .strip-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .strip-title h2 {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+
+        .strip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .strip-item {
+            height: 200px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .strip-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .strip-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .strip-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: var(--white);
+            padding: 20px 15px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .strip-item:hover .strip-overlay {
+            transform: translateY(0);
+        }
+
+        .strip-overlay h4 {
+            color: var(--white);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: var(--border-radius);
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            right: 0;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .lightbox-caption h3 {
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .lightbox-caption p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent);
+            transform: scale(1.1);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--white);
+            font-size: 3rem;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 10px;
+        }
+
+        .lightbox-nav:hover {
+            color: var(--accent);
+        }
+
+        .lightbox-nav.prev {
+            left: -60px;
+        }
+
+        .lightbox-nav.next {
+            right: -60px;
+        }
+
+        /* Video Gallery Section */
+        .video-gallery {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .video-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .video-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .video-item:hover .video-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+            border: 3px solid var(--accent);
+        }
+
+        .video-item:hover .play-button {
+            background-color: var(--accent);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .video-info p {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* footer */
+        .main-footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo .logo-monogram {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #d4b95c 100%);
+        }
+
+        .footer-logo h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .footer-logo p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 0;
+        }
+
+        .footer-about {
+            opacity: 0.8;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+            color: var(--dark);
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        address p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            flex-wrap: wrap;
+        }
+
+        address i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .gallery-hero h1 {
+                font-size: 3rem;
+            }
+
+            .lightbox-nav.prev {
+                left: 10px;
+            }
+
+            .lightbox-nav.next {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 100px 30px 30px;
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+                gap: 20px;
+                transition: var(--transition);
+                z-index: 1000;
+            }
+
+            .main-nav ul.show {
+                right: 0;
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .gallery-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+
+            .filter-tabs {
+                gap: 10px;
+            }
+
+            .filter-tab {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-hero h1 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .strip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-tab {
+                width: calc(50% - 5px);
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <p><i class="fas fa-star"></i> Explore the visual journey of Comrade Joe Ajaero's leadership through the
+                decades</p>
+            <a href="#featured-moments" class="read-more">View Featured Moments <i class="fas fa-images"></i></a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-monogram">JA</div>
+                    <div class="logo-text">
+                        <h1>COMRADE JOE AJAERO</h1>
+                        <p>Leadership · Service · Nation Building</p>
+                    </div>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <!-- <li><a href="work.html">Work & Impact</a></li> -->
+                    <li><a href="media.html">Media</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="contact-btn">Connect</a></li>
+                </ul>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>A Life in <span class="hero-highlight">Service</span></h1>
+            <p>Moments captured across decades of advocacy, leadership, and nation-building</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter Tabs
+    <div class="gallery-filter">
+        <div class="container">
+            <div class="filter-tabs">
+                <div class="filter-tab active" data-filter="all"><i class="fas fa-th-large"></i> All</div>
+                <div class="filter-tab" data-filter="1990s"><i class="fas fa-newspaper"></i> 1990s</div>
+                <div class="filter-tab" data-filter="2000s"><i class="fas fa-bolt"></i> 2000s</div>
+                <div class="filter-tab" data-filter="2010s"><i class="fas fa-handshake"></i> 2010s</div>
+                <div class="filter-tab" data-filter="2020s"><i class="fas fa-landmark"></i> 2020s</div>
+                <div class="filter-tab" data-filter="events"><i class="fas fa-calendar-alt"></i> Events</div>
+                <div class="filter-tab" data-filter="community"><i class="fas fa-users"></i> Community</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Featured Moments Strip -->
+    <div id="featured-moments" class="featured-strip">
+        <div class="container">
+            <div class="strip-title">
+                <h2><i class="fas fa-star" style="color: var(--accent);"></i> Featured Moments</h2>
+            </div>
+            <div class="strip-grid">
+                <div class="strip-item" onclick="openLightbox(0)">
+                    <img src="images/gallery/featured-1.jpg" alt="NLC Inauguration">
+                    <div class="strip-overlay">
+                        <h4>NLC Inauguration 2023</h4>
+                        <p>Historic handover ceremony</p>
+                    </div>
+                </div>
+                <div class="strip-item" onclick="openLightbox(5)">
+                    <img src="images/gallery/featured-2.jpg" alt="Youth Rally">
+                    <div class="strip-overlay">
+                        <h4>Youth Empowerment Tour</h4>
+                        <p>Engaging next generation</p>
+                    </div>
+                </div>
+                <div class="strip-item" onclick="openLightbox(8)">
+                    <img src="images/gallery/featured-3.jpg" alt="International Summit">
+                    <div class="strip-overlay">
+                        <h4>ILO Geneva 2024</h4>
+                        <p>Global labour advocacy</p>
+                    </div>
+                </div>
+                <div class="strip-item" onclick="openLightbox(12)">
+                    <img src="images/gallery/featured-4.jpg" alt="Community Visit">
+                    <div class="strip-overlay">
+                        <h4>Market Outreach</h4>
+                        <p>Listening to traders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- 1990s - Journalism Era -->
+                <div class="gallery-item" data-category="1990s" data-index="0">
+                    <div class="gallery-image">
+                        <img src="images/1990s-1.jpg" alt="Vanguard Newspaper office 1992">
+                        <div class="gallery-badge"><i class="fas fa-newspaper"></i></div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>First Day at Vanguard</h3>
+                        <p>Young reporter Joe Ajaero begins his journalism career at Vanguard Newspapers, Lagos.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i></span>
+                            <span><i class="fas fa-map-marker-alt"></i> Lagos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="1990s" data-index="1">
+                    <div class="gallery-image">
+                        <img src="images/1990s-2.png" alt="Press conference 1995">
+                        <div class="gallery-badge"><i class="fas fa-microphone"></i></div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Press Freedom Advocacy</h3>
+                        <p>Speaking at a press freedom rally during the pro-democracy movement.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i></span>
+                            <span><i class="fas fa-map-marker-alt"></i> Lagos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="1990s" data-index="2">
+                    <div class="gallery-image">
+                        <img src="images/nlc-executive.jpg" alt="NUJ meeting 1998">
+                        <div class="gallery-badge"><i class="fas fa-users"></i></div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>NUJ Executive Meeting</h3>
+                        <p>Participating in Nigeria Union of Journalists strategy session.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i></span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2000s - NUEE Era
+                <div class="gallery-item" data-category="2000s" data-index="3">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2000s-1.jpg" alt="NUEE training 2002">
+                        <div class="gallery-badge"><i class="fas fa-chalkboard-teacher"></i> 2002</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>First NUEE Training Workshop</h3>
+                        <p>Leading capacity building for electricity workers in Kaduna.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2002</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Kaduna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="2000s" data-index="4">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2000s-2.jpg" alt="Power sector reform 2004">
+                        <div class="gallery-badge"><i class="fas fa-bolt"></i> 2004</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Power Sector Reform Hearing</h3>
+                        <p>Presenting workers' position on electricity privatization.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2004</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="2000s" data-index="5">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2000s-3.jpg" alt="ILO Turin 2009">
+                        <div class="gallery-badge"><i class="fas fa-globe"></i> 2009</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>ILO Training, Turin</h3>
+                        <p>International Labour Organization certification program in Italy.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2009</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Turin, Italy</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- 2010s - Movement Building
+                <div class="gallery-item" data-category="2010s" data-index="6">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2010s-1.jpg" alt="Labour unity summit 2012">
+                        <div class="gallery-badge"><i class="fas fa-handshake"></i> 2012</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Labour Unity Summit</h3>
+                        <p>Bringing together various trade unions for collective action.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2012</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="2010s" data-index="7">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2010s-2.jpg" alt="Minimum wage protest 2015">
+                        <div class="gallery-badge"><i class="fas fa-fist-raised"></i> 2015</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Minimum Wage Campaign</h3>
+                        <p>Leading workers in demand for living wage.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2015</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Lagos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="2010s" data-index="8">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2010s-3.jpg" alt="Harvard Executive Education 2017">
+                        <div class="gallery-badge"><i class="fas fa-graduation-cap"></i> 2017</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Harvard Business School</h3>
+                        <p>Executive leadership program at Harvard University.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2017</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Boston, USA</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- 2020s - NLC Presidency
+                <div class="gallery-item" data-category="2020s" data-index="9">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2020s-1.jpg" alt="NLC handover 2023">
+                        <div class="gallery-badge"><i class="fas fa-handover"></i> 2023</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>NLC Presidential Handover</h3>
+                        <p>Taking oath as National President of Nigeria Labour Congress.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="2020s" data-index="10">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2020s-2.jpg" alt="Meeting with President 2023">
+                        <div class="gallery-badge"><i class="fas fa-government"></i> 2023</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Presidential Villa Meeting</h3>
+                        <p>Engaging with government on workers' welfare and national policy.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Aso Rock, Abuja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="2020s" data-index="11">
+                    <div class="gallery-image">
+                        <img src="images/gallery/2020s-3.jpg" alt="May Day rally 2024">
+                        <div class="gallery-badge"><i class="fas fa-flag"></i> 2024</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Workers' Day Rally</h3>
+                        <p>Addressing workers at the May Day celebration in Abuja.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Events Category
+                <div class="gallery-item" data-category="events" data-index="12">
+                    <div class="gallery-image">
+                        <img src="images/gallery/events-1.jpg" alt="National Development Forum 2024">
+                        <div class="gallery-badge"><i class="fas fa-chalkboard"></i> 2024</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>National Development Forum</h3>
+                        <p>Keynote address on "The Nigeria We Deserve".</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events" data-index="13">
+                    <div class="gallery-image">
+                        <img src="images/gallery/events-2.jpg" alt="ILO Conference Geneva 2024">
+                        <div class="gallery-badge"><i class="fas fa-un"></i> 2024</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>ILO International Conference</h3>
+                        <p>Representing Nigerian workers at the International Labour Conference.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Geneva, Switzerland</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Community Category
+                <div class="gallery-item" data-category="community" data-index="14">
+                    <div class="gallery-image">
+                        <img src="images/gallery/community-1.jpg" alt="Market outreach 2024">
+                        <div class="gallery-badge"><i class="fas fa-shopping-basket"></i> 2024</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Wuse Market Engagement</h3>
+                        <p>Listening to traders' concerns and economic challenges.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="community" data-index="15">
+                    <div class="gallery-image">
+                        <img src="images/gallery/community-2.jpg" alt="Youth town hall 2024">
+                        <div class="gallery-badge"><i class="fas fa-users"></i> 2024</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Youth Town Hall</h3>
+                        <p>Engaging with young Nigerians on employment and skills development.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Kano</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="community" data-index="16">
+                    <div class="gallery-image">
+                        <img src="images/gallery/community-3.jpg" alt="Hospital visit 2024">
+                        <div class="gallery-badge"><i class="fas fa-hospital"></i> 2024</div>
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Healthcare Workers Visit</h3>
+                        <p>Solidarity visit to health workers at National Hospital.</p>
+                        <div class="gallery-meta">
+                            <span><i class="far fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja</span>
+                        </div>
+                    </div>
+                </div> --->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-video" style="color: var(--accent);"></i> Video Gallery</h2>
+            <p class="section-subtitle">Key speeches, interviews, and moments captured on video</p>
+
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-thumbnail" onclick="playVideo('keynote-2024')">
+                        <img src="images/gallery/video-thumb-1.jpg" alt="National Development Forum Keynote">
+                        <div class="play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>National Development Forum Keynote</h4>
+                        <p><i class="far fa-clock"></i> 45:22 • 2024</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-thumbnail" onclick="playVideo('channels-interview')">
+                        <img src="images/gallery/video-thumb-2.jpg" alt="Channels TV Interview">
+                        <div class="play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Channels TV: "The Path to National Renewal"</h4>
+                        <p><i class="far fa-clock"></i> 28:15 • 2024</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-thumbnail" onclick="playVideo('may-day')">
+                        <img src="images/gallery/video-thumb-3.jpg" alt="May Day Address">
+                        <div class="play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Workers' Day Address 2024</h4>
+                        <p><i class="far fa-clock"></i> 18:30 • 2024</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-thumbnail" onclick="playVideo('youth-summit')">
+                        <img src="images/gallery/video-thumb-4.jpg" alt="Youth Summit">
+                        <div class="play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h4>National Youth Summit: Empowering the Next Generation</h4>
+                        <p><i class="far fa-clock"></i> 52:10 • 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-desc"></p>
+            </div>
+            <div class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></div>
+            <div class="lightbox-nav prev" onclick="changeImage(-1)"><i class="fas fa-chevron-left"></i></div>
+            <div class="lightbox-nav next" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <div class="footer-logo">
+                        <div class="logo-monogram">JA</div>
+                        <div>
+                            <h3>COMRADE JOE AJAERO</h3>
+                            <p>National Leader & Advocate</p>
+                        </div>
+                    </div>
+                    <p class="footer-about">Dedicated to service, justice, and building a Nigeria where every citizen
+                        thrives.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="about.html">About Ajaero</a></li>
+                        <li><a href="vision.html">Vision for Nigeria</a></li>
+                        <!-- <li><a href="work.html">Work & Impact</a></li> -->
+                        <li><a href="media.html">Media & Speeches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Gallery</h4>
+                    <ul>
+                        <li><a href="gallery.html#1990s">1990s Archive</a></li>
+                        <li><a href="gallery.html#2000s">2000s Collection</a></li>
+                        <li><a href="gallery.html#2010s">2010s Highlights</a></li>
+                        <li><a href="gallery.html#2020s">2020s Moments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <address>
+                        <p><i class="fas fa-envelope"></i> contact@comradejoseph.org</p>
+                        <p><i class="fas fa-phone"></i> +234 800 000 0000</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Comrade Joe Ajaero Personal Website. All images are for illustrative purposes.</p>
+                <p class="disclaimer">Photo gallery documenting a lifetime of leadership and service.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.main-nav ul');
+
+        if (mobileBtn && navMenu) {
+            mobileBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('show');
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!navMenu.contains(event.target) && !mobileBtn.contains(event.target) && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    const icon = mobileBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 100) {
+                header?.classList.add('scrolled');
+            } else {
+                header?.classList.remove('scrolled');
+            }
+        });
+
+        // Gallery Filter Functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                filterTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                const filterValue = tab.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDesc = document.getElementById('lightbox-desc');
+        let currentIndex = 0;
+        const galleryData = [];
+
+        // Collect gallery data
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            const img = item.querySelector('img');
+            const title = item.querySelector('h3').textContent;
+            const desc = item.querySelector('p').textContent;
+            const year = item.querySelector('.gallery-meta span:first-child').textContent;
+            const location = item.querySelector('.gallery-meta span:last-child').textContent;
+
+            galleryData.push({
+                src: img.src,
+                title: title,
+                desc: `${desc} ${year} • ${location}`
+            });
+
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                updateLightbox();
+                lightbox.classList.add('show');
+            });
+        });
+
+        function updateLightbox() {
+            lightboxImg.src = galleryData[currentIndex].src;
+            lightboxTitle.textContent = galleryData[currentIndex].title;
+            lightboxDesc.textContent = galleryData[currentIndex].desc;
+        }
+
+        window.openLightbox = function (index) {
+            currentIndex = index;
+            updateLightbox();
+            lightbox.classList.add('show');
+        };
+
+        window.closeLightbox = function () {
+            lightbox.classList.remove('show');
+        };
+
+        window.changeImage = function (direction) {
+            currentIndex = (currentIndex + direction + galleryData.length) % galleryData.length;
+            updateLightbox();
+        };
+
+        // Close lightbox with escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+                closeLightbox();
+            }
+            if (e.key === 'ArrowLeft' && lightbox.classList.contains('show')) {
+                changeImage(-1);
+            }
+            if (e.key === 'ArrowRight' && lightbox.classList.contains('show')) {
+                changeImage(1);
+            }
+        });
+
+        // Video play simulation
+        window.playVideo = function (videoId) {
+            alert(`Video player would open: ${videoId}\n\nIn production, this would link to the actual video content.`);
+        };
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const id = this.getAttribute('href');
+                if (id === '#') return;
+                const target = document.querySelector(id);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

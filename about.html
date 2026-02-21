@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about Comrade Joe Ajaero – his life, education, and career as a labour leader and advocate for social justice.">
+    <title>About | Comrade Joe Ajaero</title>
+    <!-- same fonts + icons as homepage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== EXACT same root/variables, reset, components as index.html ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a3c34;
+            --secondary: #2d5c4f;
+            --accent: #c8a951;
+            --accent-light: #e6d8a8;
+            --dark: #1a1a1a;
+            --dark-gray: #333;
+            --medium-gray: #666;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(45, 92, 79, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* announcement bar – same style */
+        .announcement-bar {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 12px 0;
+            font-size: 0.95rem;
+        }
+
+        .announcement-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .announcement-bar i {
+            margin-right: 8px;
+            color: var(--accent-light);
+        }
+
+        .announcement-bar .read-more {
+            color: var(--accent-light);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .announcement-bar .read-more:hover {
+            gap: 12px;
+            color: var(--white);
+        }
+
+        /* header identical */
+        .main-header {
+            padding: 20px 0;
+            background-color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .main-header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-monogram {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .main-nav a {
+            font-weight: 600;
+            color: var(--dark-gray);
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary);
+        }
+
+        .main-nav a.active {
+            color: var(--primary);
+        }
+
+        .main-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .contact-btn {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* about page specific */
+        .about-hero {
+            padding: 60px 0 40px;
+            background-color: var(--light-gray);
+        }
+
+        .about-hero .container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-hero-image {
+            flex: 0 0 280px;
+        }
+
+        .profile-frame {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--white);
+            box-shadow: var(--shadow-heavy);
+            background: var(--light-gray);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pronounce {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            margin-bottom: 1rem;
+        }
+
+        .pronounce i {
+            color: var(--accent);
+            margin-right: 5px;
+        }
+
+        .hero-quote-small {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(200, 169, 81, 0.1);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        /* timeline / education & career */
+        .bio-section {
+            padding: 70px 0;
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .bio-card {
+            background-color: var(--light-gray);
+            padding: 35px 30px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .bio-card:hover {
+            box-shadow: var(--shadow);
+            background-color: var(--white);
+        }
+
+        .bio-card h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--accent-light);
+            padding-bottom: 15px;
+        }
+
+        .bio-card h2 i {
+            color: var(--accent);
+            font-size: 2rem;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.3rem;
+            font-family: 'Source Serif Pro', serif;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .timeline-desc {
+            color: var(--medium-gray);
+            margin-top: 5px;
+            font-size: 0.95rem;
+        }
+
+        .institution {
+            font-style: italic;
+            color: var(--dark);
+            margin-top: 4px;
+            font-size: 0.95rem;
+        }
+
+        .career-highlight {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-top: 25px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .career-highlight i {
+            color: var(--accent);
+            width: 28px;
+        }
+
+        .quote-block {
+            background-color: rgba(26, 60, 52, 0.03);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 60px 0 30px;
+        }
+
+        .quote-block p {
+            font-size: 1.6rem;
+            font-family: 'Source Serif Pro', serif;
+            color: var(--primary);
+            line-height: 1.4;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-author {
+            margin-top: 20px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .full-story-section {
+            background-color: var(--light-gray);
+            padding: 70px 0;
+        }
+
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .story-content h3 {
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .story-content h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .story-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .story-content li {
+            margin-bottom: 8px;
+            color: var(--dark-gray);
+        }
+
+        /* footer identical */
+        .main-footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo .logo-monogram {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #d4b95c 100%);
+        }
+
+        .footer-logo h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .footer-logo p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 0;
+        }
+
+        .footer-about {
+            opacity: 0.8;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+            color: var(--dark);
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        address p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            flex-wrap: wrap;
+        }
+
+        address i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        .footer-newsletter {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-cta {
+            color: var(--accent);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-cta:hover {
+            gap: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            margin-top: 10px;
+            font-style: italic;
+            opacity: 0.7;
+        }
+
+        /* ===== ENHANCED MOBILE RESPONSIVENESS ===== */
+        @media (max-width: 992px) {
+            .about-hero .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .about-hero-image {
+                margin-bottom: 10px;
+            }
+
+            .hero-quote-small {
+                text-align: left;
+            }
+
+            .bio-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 100px 30px 30px;
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+                gap: 20px;
+                transition: var(--transition);
+                z-index: 1000;
+            }
+
+            .main-nav ul.show {
+                right: 0;
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .story-content {
+                padding: 30px 20px;
+            }
+
+            .about-hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-frame {
+                width: 240px;
+                height: 240px;
+            }
+
+            .bio-card {
+                padding: 25px 20px;
+            }
+
+            .bio-card h2 {
+                font-size: 1.8rem;
+            }
+
+            .quote-block {
+                padding: 30px 20px;
+            }
+
+            .quote-block p {
+                font-size: 1.3rem;
+            }
+
+            .footer-grid {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .profile-frame {
+                width: 200px;
+                height: 200px;
+            }
+
+            .about-hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .about-hero {
+                padding: 40px 0 30px;
+            }
+
+            .bio-section {
+                padding: 50px 0;
+            }
+
+            .full-story-section {
+                padding: 50px 0;
+            }
+
+            .story-content {
+                padding: 25px 15px;
+            }
+
+            .story-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .timeline-year {
+                font-size: 1.1rem;
+            }
+
+            .timeline-title {
+                font-size: 1.1rem;
+            }
+
+            .footer-col {
+                text-align: center;
+            }
+
+            .footer-col h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            address p {
+                justify-content: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .profile-frame {
+                width: 180px;
+                height: 180px;
+            }
+
+            .about-hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo-text h1 {
+                font-size: 1.2rem;
+            }
+
+            .logo-text p {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- announcement bar (same as index) -->
+    <div class="announcement-bar">
+        <div class="container">
+            <p><i class="fas fa-star"></i> Featured: Comrade Ajaero's keynote address at the National Development Forum
+                now available</p>
+            <a href="media/keynote-national-development.html" class="read-more">Watch Address <i
+                    class="fas fa-play-circle"></i></a>
+        </div>
+    </div>
+
+    <!-- header (identical) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-monogram">JA</div>
+                    <div class="logo-text">
+                        <h1>COMRADE JOE AJAERO</h1>
+                        <p>Leadership · Service · Nation Building</p>
+                    </div>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <!-- <li><a href="work.html">Work & Impact</a></li> -->
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="contact-btn">Connect</a></li>
+                </ul>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- about hero with SAME IMAGE as index page -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-image">
+                <div class="profile-frame">
+                    <!-- Same image referenced in index.html - hero-portrait-personal.jpg -->
+                    <img src="images/hero-portrait-personal.jpg" alt="Comrade Joe Ajaero - National Leader & Advocate">
+                </div>
+            </div>
+            <div class="about-hero-text">
+                <h1>Comrade Joe Ajaero</h1>
+                <p class="lead"><strong>Born 17 December 1964</strong> in Emekuku, Owerri North, Imo State. National
+                    President of the Nigeria Labour Congress (NLC) since 2023, succeeding Ayuba Wabba.</p>
+                <div class="hero-quote-small">
+                    <p><i class="fas fa-quote-left" style="color: var(--accent);"></i> Leadership is the courage to
+                        stand with the people, always. <i class="fas fa-quote-right" style="color: var(--accent);"></i>
+                    </p>
+                    <span style="font-weight:600; color: var(--primary);">— Joe Ajaero</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- timeline grid : education (left) / career (right) -->
+    <section class="bio-section">
+        <div class="container">
+            <div class="bio-grid">
+                <!-- EDUCATION CARD -->
+                <div class="bio-card">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-title">Bachelor of Laws (LL.B)</div>
+                        <div class="institution">Baze University, Abuja</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2003</div>
+                        <div class="timeline-title">Advance Tariff Structuring & Subsidy Design</div>
+                        <div class="institution">International Professional Practice Partnership, Cape Town</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1998</div>
+                        <div class="timeline-title">M.Sc. Industrial & Labour Relations</div>
+                        <div class="institution">University of Lagos</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1994</div>
+                        <div class="timeline-title">Post Graduate Diploma in Journalism</div>
+                        <div class="institution">Times Journalism Institute</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1990</div>
+                        <div class="timeline-title">B.Ed (Education)</div>
+                        <div class="institution">University of Nigeria, Nsukka</div>
+                    </div>
+                    <div class="career-highlight">
+                        <p><i class="fas fa-certificate"></i> <strong>Executive certifications:</strong> St George's
+                            Business School (Cambridge), Harvard Business School, East & South African Management
+                            Institute (2011), ILO Turin-Italy (2009).</p>
+                    </div>
+                </div>
+
+                <!-- CAREER CARD -->
+                <div class="bio-card">
+                    <h2><i class="fas fa-briefcase"></i> Career path</h2>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023 – present</div>
+                        <div class="timeline-title">National President</div>
+                        <div class="institution">Nigerian Labour Congress (NLC)</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2005 – 2001</div>
+                        <div class="timeline-title">Head of Training & Information</div>
+                        <div class="institution">National Union of Electricity Employees (NUEE)</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1992 – 2001</div>
+                        <div class="timeline-title">Reporter / Correspondent / Asst. News Editor</div>
+                        <div class="institution">Vanguard Newspapers</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1990 – 1991</div>
+                        <div class="timeline-title">Research Officer (NYSC)</div>
+                        <div class="institution">One Mechanised Infantry Division, Nigerian Army, Kaduna</div>
+                    </div>
+                    <div class="career-highlight" style="margin-top: 25px;">
+                        <p><i class="fas fa-newspaper"></i> <strong>Journalist turned labour leader:</strong> From
+                            Vanguard newsroom to leading Nigeria's foremost labour centre – a lifelong commitment to
+                            justice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- full life & career story (as provided, with details) -->
+    <section class="full-story-section">
+        <div class="container">
+            <div class="story-content">
+                <h3>Early life</h3>
+                <p>Joe Ajaero was born on 17 December 1964 in Emekuku, Owerri North Local Government Area, Imo State. He
+                    grew up witnessing the dignity of labour and the struggles of everyday Nigerians, which shaped his
+                    lifelong dedication to workers' rights and social justice.</p>
+
+                <h3>Educational journey</h3>
+                <p>After obtaining his bachelor's degree in Education from the University of Nigeria, Nsukka (1990), he
+                    served with the Nigerian Army in Kaduna during his NYSC (1990–1991). His thirst for knowledge led
+                    him to a Post Graduate Diploma in Journalism from the Times Journalism Institute (1994) and then a
+                    master's degree in Industrial and Labour Relations from the University of Lagos (1998).</p>
+                <p>In 2003 he earned a Certificate in Advanced Tariff Structuring and Subsidy Design Options from the
+                    International Professional Practice Partnership, Cape Town. He further sharpened his leadership
+                    skills at St George's Business School (Cambridge), Harvard Business School, the East and South
+                    African Management Institute (2011), and the International Training Centre of the ILO in Turin,
+                    Italy (2009). Most recently, in 2023, he completed a Bachelor of Laws (LL.B) at Baze University,
+                    Abuja.</p>
+
+                <h3>Career highlights</h3>
+                <p><strong>Journalism (1992–2001):</strong> Ajaero began his professional career at Vanguard Newspapers
+                    as a reporter and correspondent, rising to assistant news editor. His incisive reporting covered
+                    labour, politics, and social issues, giving him a front‑row seat to the challenges facing Nigerian
+                    workers.</p>
+                <p><strong>Labour movement (2001–2005):</strong> He joined the National Union of Electricity Employees
+                    (NUEE) as Head of Training and Information, where he designed capacity‑building programmes and
+                    articulated the union's message during the electricity sector reforms.</p>
+                <p><strong>Nigeria Labour Congress:</strong> With decades of experience in labour advocacy, he was
+                    elected National President of the NLC in 2023, succeeding Ayuba Wabba. His tenure focuses on
+                    inclusive growth, decent wages, and defending the rights of Nigerian workers. In September 2024, he
+                    was arrested by the State Security Service after speaking out against fuel price hikes – a testament
+                    to his unwavering commitment to speaking truth to power.</p>
+
+                <div class="quote-block">
+                    <p>“True leadership is measured by how we lift others as we climb.”</p>
+                    <div class="quote-author">— Comrade Joe Ajaero</div>
+                </div>
+
+                <h3>Legacy & vision</h3>
+                <p>Beyond titles, Comrade Ajaero is known as a unifier, a bridge‑builder, and an advocate for a Nigeria
+                    that works for everyone. His life story – from a village in Imo State to the pinnacle of the labour
+                    movement – embodies the resilience and dignity of the Nigerian worker.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer (exactly as index) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <div class="footer-logo">
+                        <div class="logo-monogram">JA</div>
+                        <div>
+                            <h3>COMRADE JOE AJAERO</h3>
+                            <p>National Leader & Advocate</p>
+                        </div>
+                    </div>
+                    <p class="footer-about">Dedicated to service, justice, and building a Nigeria where every citizen
+                        thrives.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="about.html">About Ajaero</a></li>
+                        <li><a href="vision.html">Vision for Nigeria</a></li>
+                        <!-- <li><a href="work.html">Work & Impact</a></li> -->
+                        <li><a href="media.html">Media & Speeches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="policy-papers.html">Policy Papers</a></li>
+                        <li><a href="contact.html">Connect & Inquire</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <address>
+                        <p><i class="fas fa-envelope"></i> contact@comradejoseph.org</p>
+                        <p><i class="fas fa-phone"></i> +234 800 000 0000</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria</p>
+                    </address>
+                    <div class="footer-newsletter">
+                        <p>Get updates directly</p>
+                        <a href="#newsletterForm" class="footer-cta">Subscribe Now <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Comrade Joe Ajaero Personal Website.</p>
+                <p class="disclaimer">Developed by Impact Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- enhanced mobile-friendly JS -->
+    <script>
+        // mobile menu toggle with improved touch handling
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.main-nav ul');
+
+        if (mobileBtn && navMenu) {
+            mobileBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('show');
+                // change icon between bars and times
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // close menu when clicking outside (mobile friendly)
+            document.addEventListener('click', function (event) {
+                if (!navMenu.contains(event.target) && !mobileBtn.contains(event.target) && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    const icon = mobileBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // close menu when window resizes to desktop view
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    const icon = mobileBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const id = this.getAttribute('href');
+                if (id === '#') return;
+                const target = document.querySelector(id);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 100) {
+                header?.classList.add('scrolled');
+            } else {
+                header?.classList.remove('scrolled');
+            }
+        });
+
+        // newsletter form simulation (with better mobile UX)
+        const footerCta = document.querySelector('.footer-cta');
+        if (footerCta) {
+            footerCta.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert('📬 Subscribe form (demo). Thank you for your interest in Comrade Ajaero\'s vision!');
+            });
+        }
+    </script>
+</body>
+
+</html>

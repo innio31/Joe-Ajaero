@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Media hub for Comrade Joe Ajaero - Keynote addresses, speeches, interviews, and press coverage.">
+    <title>Media | Comrade Joe Ajaero - Speeches & Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== ROOT VARIABLES (matching index) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a3c34;
+            --secondary: #2d5c4f;
+            --accent: #c8a951;
+            --accent-light: #e6d8a8;
+            --dark: #1a1a1a;
+            --dark-gray: #333;
+            --medium-gray: #666;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(45, 92, 79, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* announcement bar */
+        .announcement-bar {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 12px 0;
+            font-size: 0.95rem;
+        }
+
+        .announcement-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .announcement-bar i {
+            margin-right: 8px;
+            color: var(--accent-light);
+        }
+
+        .announcement-bar .read-more {
+            color: var(--accent-light);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .announcement-bar .read-more:hover {
+            gap: 12px;
+            color: var(--white);
+        }
+
+        /* header */
+        .main-header {
+            padding: 20px 0;
+            background-color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .main-header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-monogram {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .main-nav a {
+            font-weight: 600;
+            color: var(--dark-gray);
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary);
+        }
+
+        .main-nav a.active {
+            color: var(--primary);
+        }
+
+        .main-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .contact-btn {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* ===== MEDIA PAGE SPECIFIC STYLES ===== */
+
+        /* Media Hero */
+        .media-hero {
+            background: linear-gradient(135deg, rgba(26, 60, 52, 0.05) 0%, rgba(200, 169, 81, 0.05) 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .media-hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(200, 169, 81, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+        }
+
+        .media-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .media-hero h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .media-hero .hero-highlight {
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+
+        .media-hero .hero-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(200, 169, 81, 0.2);
+            z-index: -1;
+        }
+
+        .media-hero p {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .media-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Source Serif Pro', serif;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Media Filter Tabs */
+        .media-filter {
+            background-color: var(--white);
+            padding: 30px 0 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-tab {
+            padding: 12px 25px;
+            background-color: var(--light-gray);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-tab i {
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .filter-tab:hover {
+            background-color: var(--white);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .filter-tab.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .filter-tab.active i {
+            color: var(--accent);
+        }
+
+        /* Featured Media (Latest Keynote) */
+        .featured-media {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+
+        .featured-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .featured-video {
+            position: relative;
+            background-color: var(--dark);
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .featured-video img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .play-button-large {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 3px solid var(--accent);
+        }
+
+        .play-button-large:hover {
+            background-color: var(--accent);
+            transform: scale(1.1);
+        }
+
+        .featured-content {
+            padding: 40px;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background-color: rgba(200, 169, 81, 0.15);
+            color: var(--primary);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(200, 169, 81, 0.3);
+        }
+
+        .featured-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .featured-meta {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            color: var(--medium-gray);
+        }
+
+        .featured-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .featured-description {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        /* Media Grid */
+        .media-grid-section {
+            padding: 60px 0;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* Media Card */
+        .media-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: var(--white);
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .media-thumbnail {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background-color: var(--light-gray);
+        }
+
+        .media-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .media-card:hover .media-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .media-type-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 2;
+        }
+
+        .media-type-badge i {
+            color: var(--accent);
+        }
+
+        .media-duration {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .media-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            line-height: 1.4;
+        }
+
+        .media-content p {
+            color: var(--medium-gray);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .media-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .media-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .media-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.95rem;
+        }
+
+        .media-link:hover {
+            gap: 10px;
+        }
+
+        /* Media Archive Folders */
+        .media-archive {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+
+        .archive-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .archive-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .folder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .folder-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px 25px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            box-shadow: var(--shadow);
+        }
+
+        .folder-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .folder-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(200, 169, 81, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .folder-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .folder-card p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .folder-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .folder-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Press Coverage Section */
+        .press-section {
+            padding: 60px 0;
+        }
+
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .press-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .press-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .press-logo {
+            height: 40px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .press-logo img {
+            height: 100%;
+            width: auto;
+        }
+
+        .press-quote {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .press-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .press-outlet {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        /* Video Modal */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-modal.show {
+            display: flex;
+        }
+
+        .video-modal-content {
+            width: 90%;
+            max-width: 900px;
+            position: relative;
+        }
+
+        .video-modal-content iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: var(--border-radius);
+        }
+
+        .video-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .video-modal-close:hover {
+            color: var(--accent);
+        }
+
+        /* footer */
+        .main-footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo .logo-monogram {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #d4b95c 100%);
+        }
+
+        .footer-logo h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .footer-logo p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 0;
+        }
+
+        .footer-about {
+            opacity: 0.8;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+            color: var(--dark);
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        address p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            flex-wrap: wrap;
+        }
+
+        address i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .media-hero h1 {
+                font-size: 3rem;
+            }
+
+            .featured-card {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-video {
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 100px 30px 30px;
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+                gap: 20px;
+                transition: var(--transition);
+                z-index: 1000;
+            }
+
+            .main-nav ul.show {
+                right: 0;
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .media-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-tabs {
+                gap: 10px;
+            }
+
+            .filter-tab {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            .stat-item {
+                min-width: 120px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .media-hero h1 {
+                font-size: 2rem;
+            }
+
+            .media-stats {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .featured-content {
+                padding: 25px;
+            }
+
+            .featured-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .filter-tab {
+                width: calc(50% - 5px);
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <p><i class="fas fa-star"></i> Latest: National Development Forum Keynote Address (2024) now available</p>
+            <a href="#featured-media" class="read-more">Watch Now <i class="fas fa-play-circle"></i></a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-monogram">JA</div>
+                    <div class="logo-text">
+                        <h1>COMRADE JOE AJAERO</h1>
+                        <p>Leadership · Service · Nation Building</p>
+                    </div>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <!-- <li><a href="work.html">Work & Impact</a></li> -->
+                    <li class="active"><a href="media.html">Media</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="contact-btn">Connect</a></li>
+                </ul>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Featured Media Section -->
+    <section id="featured-media" class="featured-media">
+        <div class="container">
+            <div class="featured-card">
+                <div class="featured-video">
+                    <img src="images/media/featured-keynote.jpg" alt="National Development Forum Keynote">
+                    <div class="play-button-large" onclick="playVideo('keynote-2024-national-development')">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="featured-content">
+                    <span class="featured-badge"><i class="fas fa-star"></i> FEATURED KEYNOTE</span>
+                    <h2>The Nigeria We Deserve: A Blueprint for National Renewal</h2>
+                    <div class="featured-meta">
+                        <span><i class="far fa-calendar"></i> May 15, 2024</span>
+                        <span><i class="fas fa-map-marker-alt"></i> National Development Forum, Abuja</span>
+                        <span><i class="far fa-clock"></i> 1:24:35</span>
+                    </div>
+                    <p class="featured-description">In this landmark address at the National Development Forum, Comrade
+                        Joe Ajaero outlines a comprehensive vision for Nigeria's transformation—covering economic
+                        diversification, social justice, labour rights, and democratic consolidation. The speech has
+                        been widely praised as one of the most substantive policy frameworks from labour leadership in a
+                        generation.</p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="media/keynotes/national-development-forum-2024.html" class="btn-primary"><i
+                                class="fas fa-play"></i> Watch Full Address</a>
+                        <a href="media/transcripts/national-development-forum-2024.pdf" class="btn-secondary"><i
+                                class="fas fa-file-pdf"></i> Read Transcript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Grid Section -->
+    <section class="media-grid-section">
+        <div class="container">
+            <h2 class="section-title">Recent Media</h2>
+            <p class="section-subtitle">Latest speeches, interviews, and public engagements</p>
+
+            <div class="media-grid" id="media-grid">
+                <!-- Keynote 1 -->
+                <div class="media-card" data-category="keynote"
+                    onclick="window.location.href='media/keynote-rain-school.html'">
+                    <div class="media-thumbnail">
+                        <img src="images/hero-portrait-personal.jpg" alt="Rain School Keynote">
+                        <div class="media-type-badge"><i class="fas fa-microphone-alt"></i> Keynote</div>
+                    </div>
+                    <div class="media-content">
+                        <h3>SPEECH BY THE PRESIDENT OF THE NIGERIA LABOUR CONGRESS (NLC); COMRADE JOE AJAERO AT THE
+                            OPENING CEREMONY OF THE RAIN SCHOOL OF THE NIGERIA LABOUR CONGRESS (NLC), UYO ON THE 21ST
+                            JULY, 2025</h3>
+                        <div class="media-footer">
+                            <span class="media-date"><i class="far fa-calendar"></i> July 2025</span>
+                            <span class="media-link">Read Full Speech <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keynote 2 -->
+                <div class="media-card" data-category="keynote"
+                    onclick="window.location.href='media/micheal-imodu.html'">
+                    <div class="media-thumbnail">
+                        <img src="images/micheal-imodu.png" alt="speech at micheal imodu anniversary">
+                        <div class="media-type-badge"><i class="fas fa-microphone-alt"></i> Keynote</div>
+                    </div>
+                    <div class="media-content">
+                        <h3>SPEECH BY THE PRESIDENT OF THE NIGERIA LABOUR CONGRESS(NLC); COMRADE JOE AJAERO AT THE 20TH
+                            POSTHUMOUS ANNIVERSARY OF PA MICHAEL IMOUDU AT 157 GARDENS, IKORODU ROAD, ONIPANU, LAGOS ON
+                            SATURDAY, 20TH DECEMBER, 2025</h3>
+                        <div class="media-footer">
+                            <span class="media-date"><i class="far fa-calendar"></i> December 2025</span>
+                            <span class="media-link">Watch <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel Discussion
+                <div class="media-card" data-category="panel" onclick="openMediaPage('panels/economic-summit-2024')">
+                    <div class="media-thumbnail">
+                        <img src="images/media/panel-economic-summit.jpg" alt="Nigerian Economic Summit">
+                        <div class="media-type-badge"><i class="fas fa-users"></i> Panel</div>
+                        <div class="media-duration">1:12:40</div>
+                    </div>
+                    <div class="media-content">
+                        <h3>Nigerian Economic Summit: Labour and Productivity</h3>
+                        <p>Panel discussion on the relationship between worker welfare, productivity, and national
+                            economic growth.</p>
+                        <div class="media-footer">
+                            <span class="media-date"><i class="far fa-calendar"></i> April 2024</span>
+                            <span class="media-link">Watch <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>  -->
+
+                <!-- Keynote 2
+                <div class="media-card" data-category="keynote" onclick="openMediaPage('keynotes/may-day-2024')">
+                    <div class="media-thumbnail">
+                        <img src="images/media/keynote-may-day.jpg" alt="May Day Address 2024">
+                        <div class="media-type-badge"><i class="fas fa-microphone-alt"></i> Keynote</div>
+                        <div class="media-duration">28:30</div>
+                    </div>
+                    <div class="media-content">
+                        <h3>Workers' Day Address: Dignity of Labour</h3>
+                        <p>Annual May Day address to Nigerian workers, highlighting achievements and the road ahead for
+                            labour rights.</p>
+                        <div class="media-footer">
+                            <span class="media-date"><i class="far fa-calendar"></i> May 2024</span>
+                            <span class="media-link">Watch <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>  -->
+
+                <!-- Press Coverage
+                <div class="media-card" data-category="press" onclick="openMediaPage('press/guardian-profile-2024')">
+                    <div class="media-thumbnail">
+                        <img src="images/media/press-guardian.jpg" alt="The Guardian Profile">
+                        <div class="media-type-badge"><i class="fas fa-newspaper"></i> Press</div>
+                    </div>
+                    <div class="media-content">
+                        <h3>The Guardian: "A Leader Listening"</h3>
+                        <p>Profile feature on Comrade Ajaero's approach to leadership through engagement and dialogue.
+                        </p>
+                        <div class="media-footer">
+                            <span class="media-date"><i class="far fa-calendar"></i> March 2024</span>
+                            <span class="media-link">Read <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>  -->
+
+                <!-- Official Statement
+                <div class="media-card" data-category="statement"
+                    onclick="openMediaPage('statements/minimum-wage-2024')">
+                    <div class="media-thumbnail">
+                        <img src="images/media/statement-minimum-wage.jpg" alt="Minimum Wage Press Statement">
+                        <div class="media-type-badge"><i class="fas fa-scroll"></i> Statement</div>
+                    </div>
+                    <div class="media-content">
+                        <h3>Press Statement: Minimum Wage Negotiations</h3>
+                        <p>Official statement on the status of national minimum wage negotiations and labour's position.
+                        </p>
+                        <div class="media-footer">
+                            <span class="media-date"><i class="far fa-calendar"></i> February 2024</span>
+                            <span class="media-link">Read <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>  -->
+
+                <!-- Interview 2
+                <div class="media-card" data-category="interview" onclick="openMediaPage('interviews/bbc-newsday')">
+                    <div class="media-thumbnail">
+                        <img src="images/media/interview-bbc.jpg" alt="BBC Newsday Interview">
+                        <div class="media-type-badge"><i class="fas fa-tv"></i> Interview</div>
+                        <div class="media-duration">12:45</div>
+                    </div>
+                    <div class="media-content">
+                        <h3>BBC Newsday: Nigeria's Economic Outlook</h3>
+                        <p>International broadcast interview on Nigeria's economic challenges and labour's perspective.
+                        </p>
+                        <div class="media-footer">
+                            <span class="media-date"><i class="far fa-calendar"></i> January 2024</span>
+                            <span class="media-link">Watch <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>  -->
+
+                <!-- Keynote 3
+                <div class="media-card" data-category="keynote" onclick="openMediaPage('keynotes/unilag-lecture-2023')">
+                    <div class="media-thumbnail">
+                        <img src="images/media/keynote-unilag.jpg" alt="University of Lagos Lecture">
+                        <div class="media-type-badge"><i class="fas fa-microphone-alt"></i> Keynote</div>
+                        <div class="media-duration">1:05:20</div>
+                    </div>
+                    <div class="media-content">
+                        <h3>University of Lagos: Labour and the Law</h3>
+                        <p>Distinguished lecture on the intersection of labour rights, legal frameworks, and social
+                            justice.</p>
+                        <div class="media-footer">
+                            <span class="media-date"><i class="far fa-calendar"></i> November 2023</span>
+                            <span class="media-link">Watch <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>  -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Archive Folders
+    <section class="media-archive">
+        <div class="container">
+            <div class="archive-header">
+                <h2><i class="fas fa-folder-tree"></i> Media Archive</h2>
+                <p class="section-subtitle">Browse all media content by category</p>
+            </div>
+
+            <div class="folder-grid">
+                <div class="folder-card">
+                    <div class="folder-icon"><i class="fas fa-folder-open"></i></div>
+                    <h3>Keynote Addresses</h3>
+                    <p>Major speeches and lectures • 2020-2026</p>
+                    <div class="folder-meta">
+                        <span><i class="fas fa-video"></i> 18 videos</span>
+                        <a href="media/archive/keynotes.html" class="card-link">Browse <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-icon"><i class="fas fa-folder-open"></i></div>
+                    <h3>Interviews</h3>
+                    <p>Television, radio, and press interviews • 2015-2026</p>
+                    <div class="folder-meta">
+                        <span><i class="fas fa-microphone"></i> 28 interviews</span>
+                        <a href="media/archive/interviews.html" class="card-link">Browse <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-icon"><i class="fas fa-folder-open"></i></div>
+                    <h3>Panel Discussions</h3>
+                    <p>Conference panels and moderated discussions • 2018-2026</p>
+                    <div class="folder-meta">
+                        <span><i class="fas fa-users"></i> 15 panels</span>
+                        <a href="media/archive/panels.html" class="card-link">Browse <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-icon"><i class="fas fa-folder-open"></i></div>
+                    <h3>Press Coverage</h3>
+                    <p>Newspaper and magazine features • 1995-2026</p>
+                    <div class="folder-meta">
+                        <span><i class="fas fa-newspaper"></i> 45 articles</span>
+                        <a href="media/archive/press.html" class="card-link">Browse <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-icon"><i class="fas fa-folder-open"></i></div>
+                    <h3>Official Statements</h3>
+                    <p>Press releases and policy statements • 2020-2026</p>
+                    <div class="folder-meta">
+                        <span><i class="fas fa-file-alt"></i> 32 statements</span>
+                        <a href="media/archive/statements.html" class="card-link">Browse <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-icon"><i class="fas fa-folder-open"></i></div>
+                    <h3>International Engagements</h3>
+                    <p>Speeches and appearances outside Nigeria • 2009-2026</p>
+                    <div class="folder-meta">
+                        <span><i class="fas fa-globe"></i> 12 events</span>
+                        <a href="media/archive/international.html" class="card-link">Browse <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Press Coverage Section
+    <section class="press-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-quote-right" style="color: var(--accent);"></i> In The Press</h2>
+            <p class="section-subtitle">What leading publications are saying</p>
+
+            <div class="press-grid">
+                <div class="press-card">
+                    <div class="press-logo">
+                        <img src="images/media/logo-guardian.png" alt="The Guardian" style="filter: brightness(0);">
+                    </div>
+                    <p class="press-quote">"Ajaero brings a rare combination of intellectual rigor and grassroots
+                        connection to Nigeria's labour movement."</p>
+                    <div class="press-author">— The Guardian Nigeria</div>
+                    <div class="press-outlet">March 2024</div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-logo">
+                        <img src="images/media/logo-punch.png" alt="The Punch" style="filter: brightness(0);">
+                    </div>
+                    <p class="press-quote">"His vision extends beyond traditional labour concerns to encompass national
+                        economic transformation."</p>
+                    <div class="press-author">— The Punch</div>
+                    <div class="press-outlet">February 2024</div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-logo">
+                        <img src="images/media/logo-vanguard.png" alt="Vanguard" style="filter: brightness(0);">
+                    </div>
+                    <p class="press-quote">"From journalist to labour leader, Ajaero's journey reflects a consistent
+                        commitment to justice."</p>
+                    <div class="press-author">— Vanguard Newspapers</div>
+                    <div class="press-outlet">January 2024</div>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <div class="video-modal-close" onclick="closeVideoModal()"><i class="fas fa-times"></i></div>
+            <iframe id="videoIframe" src="" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <div class="footer-logo">
+                        <div class="logo-monogram">JA</div>
+                        <div>
+                            <h3>COMRADE JOE AJAERO</h3>
+                            <p>National Leader & Advocate</p>
+                        </div>
+                    </div>
+                    <p class="footer-about">Dedicated to service, justice, and building a Nigeria where every citizen
+                        thrives.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Media</h4>
+                    <ul>
+                        <li><a href="media/archive/keynotes.html">Keynote Addresses</a></li>
+                        <li><a href="media/archive/interviews.html">Interviews</a></li>
+                        <li><a href="media/archive/panels.html">Panel Discussions</a></li>
+                        <li><a href="media/archive/press.html">Press Coverage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="media/transcripts/">Speech Transcripts</a></li>
+                        <li><a href="media/press-kit/">Press Kit</a></li>
+                        <li><a href="contact.html">Media Inquiries</a></li>
+                        <li><a href="#">Permissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <address>
+                        <p><i class="fas fa-envelope"></i> media@comradejoseph.org</p>
+                        <p><i class="fas fa-phone"></i> +234 800 000 0000</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Comrade Joe Ajaero Personal Website. All media content is for informational purposes.</p>
+                <p class="disclaimer">For media credentials and interview requests, please contact the media team.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.main-nav ul');
+
+        if (mobileBtn && navMenu) {
+            mobileBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('show');
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!navMenu.contains(event.target) && !mobileBtn.contains(event.target) && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    const icon = mobileBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 100) {
+                header?.classList.add('scrolled');
+            } else {
+                header?.classList.remove('scrolled');
+            }
+        });
+
+        // Media Filter Functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const mediaItems = document.querySelectorAll('.media-card');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filterValue = tab.getAttribute('data-filter');
+
+                mediaItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Video Modal Functions
+        const videoModal = document.getElementById('videoModal');
+        const videoIframe = document.getElementById('videoIframe');
+
+        window.playVideo = function (videoId) {
+            // In production, this would map to actual video URLs
+            videoIframe.src = `https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1`; // Placeholder
+            videoModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        };
+
+        window.closeVideoModal = function () {
+            videoModal.classList.remove('show');
+            videoIframe.src = '';
+            document.body.style.overflow = '';
+        };
+
+        // Close modal with escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('show')) {
+                closeVideoModal();
+            }
+        });
+
+        // Click outside to close
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+
+        // Media page navigation
+        window.openMediaPage = function (pagePath) {
+            // In production, this would navigate to the actual media page
+            alert(`Navigating to: media/${pagePath}.html\n\nThis would open the full media page with video, transcript, and related content.`);
+            // window.location.href = `media/${pagePath}.html`;
+        };
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const id = this.getAttribute('href');
+                if (id === '#') return;
+                const target = document.querySelector(id);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
